@@ -2,39 +2,34 @@
 
 void Main()
 {
-	
-	Stack<int> myStack = new Stack<int>();
-myStack.Push(22);
-myStack.Push(29);
-myStack.Push(12);
-myStack.Push(14);
- List<int>number=new List<int>();
 
- for(int i=0;i<myStack.Count;i++)
- {
- int mini=myStack.ElementAt(i);
-    for(int j=0;j>myStack.Count;j++)
+   List<int>number=new List<int>(){20,12,18,16,10};
+	int a=number[0],b=0,c=0,d=0;
+	for(int i=0;i<number.Count;i++)
 	{
-	 if(mini>=myStack.ElementAt(j));
-	 mini=myStack.ElementAt(j);
+	  b=number[i];
+	 
+	  for(int j=i;j<number.Count;j++)
+	  {
+	       if (number[j]<number[i] && number[j]<a)
+	          {
+	            a=number[j];
+		        d=j;
+		      }
+			  c=b;
+	 
+	 
+	  }
+	   number[i]=a;
+	  number[d]=c;
+	 
+	  
+    }
+	
+	for(int i=0;i<number.Count;i++)
+	{
+	  Console.WriteLine(number[i]);
 	}
-	number.Add(mini);
-	
-	
-	
- }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-	
 }
 
-// You can define other methods, fields, classes and namespaces here
+	// You can define other methods, fields, classes and namespaces here
